@@ -24,7 +24,7 @@ export default function RootLayout({
           <div className="flex-none w-60 bg-gray-600">
             <Menu></Menu>
           </div>
-          <div className="grow">
+          <div className="grow w-full">
             <Navbar></Navbar>
             <div className="min-h-dvh bg-gray-400">{children}</div>
           </div>

@@ -10,17 +10,15 @@ import {
 
 export default function App() {
   return (
-    <Navbar>
-      <NavbarBrand>
+    <div className="flex justify-between justify-items-center w-full h-16 px-4 bg-gray-700">
+      <div className="pt-4">
         <p className="font-bold text-inherit text-white">Page Title</p>
-      </NavbarBrand>
-      <NavbarContent justify="end">
-        <NavbarItem>
-          <Button as={Link} className="text-white" color="primary" href="#">
-            Login
-          </Button>
-        </NavbarItem>
-      </NavbarContent>
-    </Navbar>
+      </div>
+      <div className="pt-2">
+        <Button as={Link} className="text-white" color="primary" href="#">
+          Login
+        </Button>
+      </div>
+    </div>
   );
 }
