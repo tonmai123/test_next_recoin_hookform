@@ -6,7 +6,12 @@ import { Accordion, AccordionItem, Link } from "@nextui-org/react";
 export default function App({ menuItems }: { menuItems: any }) {
   return (
     <div>
-      <div className="flex justify-center justify-items-center h-16">
+      <div
+        className="flex justify-center justify-items-center h-16 cursor-pointer"
+        onClick={() => {
+          window.location.href = "/";
+        }}
+      >
         <b className="pt-2 text-4xl text-white">Logo</b>
       </div>
       <hr />

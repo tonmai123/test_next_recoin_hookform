@@ -9,7 +9,7 @@ import {
 } from "@nextui-org/react";
 
 export default function App({ menuItems }: { menuItems: any }) {
-  const [title, setTitle] = useState("...");
+  const [title, setTitle] = useState("");
 
   useEffect(() => {
     const currentUrl = window.location.pathname;
