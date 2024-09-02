@@ -17,12 +17,9 @@ export default function App({ menuItems }: { menuItems: any }) {
       element.subMenu.forEach((e: any) => {
         if (e.link === currentUrl) {
           setTitle(e.title);
-          console.log(e.title);
         }
       })
     );
-
-    console.log(title);
   }, [title]);
 
   return (
@@ -31,7 +28,7 @@ export default function App({ menuItems }: { menuItems: any }) {
         <p className="font-bold text-inherit text-white">{title}</p>
       </div>
       <div className="pt-2">
-        <Button as={Link} className="text-white" color="primary" href="#">
+        <Button as={Link} className="text-white" color="primary" href="/login">
           Login
         </Button>
       </div>

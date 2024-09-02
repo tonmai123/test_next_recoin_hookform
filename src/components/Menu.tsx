@@ -9,13 +9,13 @@ export default function App({ menuItems }: { menuItems: any }) {
       <div
         className="flex justify-center justify-items-center h-16 cursor-pointer"
         onClick={() => {
-          window.location.href = "/";
+          window.location.href = "/main";
         }}
       >
         <b className="pt-2 text-4xl text-white">Logo</b>
       </div>
       <hr />
-      <div>
+      {/* <div>
         <Accordion selectionMode="multiple" selectedKeys={["menu1", "menu2"]}>
           {menuItems.map((item: any) => (
             <AccordionItem
@@ -38,6 +38,25 @@ export default function App({ menuItems }: { menuItems: any }) {
             </AccordionItem>
           ))}
         </Accordion>
+      </div> */}
+      <div className="pt-4">
+        {menuItems.map((item: any) => (
+          <div key={item.key} className="px-4 pb-4">
+            <div className="pb-2 font-bold text-xl text-white">
+              {item.title}
+            </div>
+            {item.subMenu.map((subItem: any) => (
+              <div
+                className="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-700 hover:text-gray-300 rounded transition-all duration-200"
+                key={subItem.key}
+                onClick={() => (window.location.href = subItem.link)}
+              >
+                <subItem.icon className="mr-2 text-white" />
+                <p className="text-white">{subItem.title}</p>
+              </div>
+            ))}
+          </div>
+        ))}
       </div>
     </div>
   );
