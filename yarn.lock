@@ -251,27 +251,7 @@
   resolved "https://registry.npmjs.org/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-14.2.7.tgz"
   integrity sha512-pxsI23gKWRt/SPHFkDEsP+w+Nd7gK37Hpv0ngc5HpWy2e7cKx9zR/+Q2ptAUqICNTecAaGWvmhway7pj/JLEWA==
 
-"@nextui-org/accordion@2.0.38":
-  version "2.0.38"
-  resolved "https://registry.npmjs.org/@nextui-org/accordion/-/accordion-2.0.38.tgz"
-  integrity sha512-kFCZU1VaKkUI295Fg3NxuQR2+kZ5vTH4ftIs0oByrOs0+l14dVQGFOd9ZV402fHNykZJt7Sk6oWjTp4Qwl83JA==
-  dependencies:
-    "@nextui-org/aria-utils" "2.0.24"
-    "@nextui-org/divider" "2.0.31"
-    "@nextui-org/framer-utils" "2.0.24"
-    "@nextui-org/react-utils" "2.0.16"
-    "@nextui-org/shared-icons" "2.0.9"
-    "@nextui-org/shared-utils" "2.0.7"
-    "@nextui-org/use-aria-accordion" "2.0.7"
-    "@react-aria/button" "3.9.5"
-    "@react-aria/focus" "3.17.1"
-    "@react-aria/interactions" "3.21.3"
-    "@react-aria/utils" "3.24.1"
-    "@react-stately/tree" "3.8.1"
-    "@react-types/accordion" "3.0.0-alpha.21"
-    "@react-types/shared" "3.23.1"
-
-"@nextui-org/accordion@^2.0.38":
+"@nextui-org/accordion@2.0.38", "@nextui-org/accordion@^2.0.38":
   version "2.0.38"
   resolved "https://registry.yarnpkg.com/@nextui-org/accordion/-/accordion-2.0.38.tgz#1c357556e8546ddbaf3a6a6aecdde15af552a528"
   integrity sha512-kFCZU1VaKkUI295Fg3NxuQR2+kZ5vTH4ftIs0oByrOs0+l14dVQGFOd9ZV402fHNykZJt7Sk6oWjTp4Qwl83JA==
@@ -4478,6 +4458,11 @@ react-dom@^18:
   dependencies:
     loose-envify "^1.1.0"
     scheduler "^0.23.2"
+
+react-icons@^5.3.0:
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-5.3.0.tgz#ccad07a30aebd40a89f8cfa7d82e466019203f1c"
+  integrity sha512-DnUk8aFbTyQPSkCfF8dbX6kQjXA9DktMeJqfjrg6cK9vwQVMxmcA3BfP4QoiztVmEHtwlTgLFsPuH2NskKT6eg==
 
 react-is@^16.13.1:
   version "16.13.1"

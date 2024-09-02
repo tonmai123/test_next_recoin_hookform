@@ -1,9 +1,39 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Accordion, AccordionItem, Link } from "@nextui-org/react";
+import { VscCopilot, VscExclude } from "react-icons/vsc";
 
 export default function App() {
+  const menu = [
+    {
+      title: "Menu1",
+      key: "menu1",
+      link: "#",
+      subMenu: [
+        {
+          title: "Sub Menu1",
+          key: "subMenu1",
+          icon: VscCopilot,
+          link: "/subMenu1",
+        },
+      ],
+    },
+    {
+      title: "Menu2",
+      key: "menu2",
+      link: "#",
+      subMenu: [
+        {
+          title: "Sub Menu2",
+          key: "subMenu2",
+          icon: VscExclude,
+          link: "/subMenu2",
+        },
+      ],
+    },
+  ];
+
   return (
     <div>
       <div className="flex justify-center justify-items-center h-16">
@@ -11,23 +41,27 @@ export default function App() {
       </div>
       <hr />
       <div>
-        <Accordion>
-          <AccordionItem key="1" aria-label="Menu 1" title="Menu 1">
-            <Link className="text-white cursor-pointer">sub menu1</Link>
-          </AccordionItem>
-          <AccordionItem key="2" aria-label="Menu 2" title="Menu 2">
-            <div>
-              <Link className="text-white cursor-pointer">sub menu2</Link>
-            </div>
-          </AccordionItem>
-          <AccordionItem key="3" aria-label="Menu 3" title="Menu 3">
-            <div>
-              <Link className="text-white cursor-pointer">sub menu3</Link>
-            </div>
-            <div>
-              <Link className="text-white cursor-pointer">sub menu3</Link>
-            </div>
-          </AccordionItem>
+        <Accordion selectionMode="multiple" selectedKeys={["menu1", "menu2"]}>
+          {menu.map((item) => (
+            <AccordionItem
+              key={item.key}
+              aria-label={item.title}
+              title={item.title}
+              className="px-4"
+            >
+              {item.subMenu.map((subItem) => (
+                <div className="flex items-center px-4 -mt-3" key={subItem.key}>
+                  <subItem.icon className="mr-2 text-white" />
+                  <Link
+                    className="text-white cursor-pointer"
+                    href={subItem.link}
+                  >
+                    {subItem.title}
+                  </Link>
+                </div>
+              ))}
+            </AccordionItem>
+          ))}
         </Accordion>
       </div>
     </div>
